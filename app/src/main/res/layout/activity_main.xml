@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+        
+        <TextView
+            android:id="@+id/form_pengisian"
+            android:layout_width="188dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:text="Form Pengisian Data"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="81dp"
+            >
+        </TextView>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
+                android:text="info"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_marginTop="15dp"
+                />
+
+
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/jenisantidot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info1"
+            android:text="Jenis Tes • Harus Diisi"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            >
+        </TextView>
+<RadioGroup
+    android:id="@+id/rapidpcr"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+        <RadioButton
+            android:id="@+id/antigen"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Rapid Antigen"
+            android:textSize="14dp"
+            android:layout_marginLeft="15dp"
+            >
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/pcr"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="PCR"
+            android:textSize="14dp"
+            android:layout_marginLeft="15dp"
+            >
+        </RadioButton>
+</RadioGroup>
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Terkonfirmasi • Harus Diisi"
+            android:textColor="@color/black"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/tanggal1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pilih Tanggal"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            style="?android:spinnerStyle"
+            android:layout_marginLeft="10dp"
+            app:layout_constrainLeft_toLeftOf="Parent"
+            app:layout_constrainRight_toRightOf="Parent"
+            app:layout_constrainTop_toBottomOf="@+id/textview"
+            android:layout_marginTop="10dp"
+            android:onClick="openDataPicker"
+            >
+        </Button>
+
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>

@@ -10,9 +10,7 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -102,7 +100,78 @@
         </TextView>
 
         <Button
-            android:id="@+id/tanggal1"
+            android:id="@+id/datePickerButton"
+            style="?android:spinnerStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="openDatePicker"
+            android:text="Pilih Tanggal"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constrainLeft_toLeftOf="Parent"
+            app:layout_constrainRight_toRightOf="Parent"
+            app:layout_constrainTop_toBottomOf="@+id/textview"></Button>
+
+        <TextView
+            android:id="@+id/nik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIK"
+            android:textColor="@color/black"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/nik1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masukkan NIK"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            >
+        </EditText>
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama • Harus Diisi"
+            android:textColor="@color/black"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/nama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masukkan Nama"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            >
+        </EditText>
+
+        <TextView
+            android:id="@+id/tanggallahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir • Harus Diisi"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/datePickerButton1"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="Pilih Tanggal"
@@ -114,10 +183,107 @@
             app:layout_constrainRight_toRightOf="Parent"
             app:layout_constrainTop_toBottomOf="@+id/textview"
             android:layout_marginTop="10dp"
-            android:onClick="openDataPicker"
+            android:onClick="openDatePicker"
             >
         </Button>
 
+        <TextView
+            android:id="@+id/jeniskelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info1"
+            android:text="Jenis kelamin • Harus Diisi"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            >
+        </TextView>
+        <RadioGroup
+            android:id="@+id/jeniskelamin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:id="@+id/lakilaki"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Laki - Laki"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/perempuan"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/hubugnan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info1"
+            android:text="Hubungan Dengan Anda • Harus Diisi"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            >
+        </TextView>
+        <RadioGroup
+            android:id="@+id/hubungan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:id="@+id/orangtua"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Orang Tua"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/suamiistri"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Suami/Istri"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/anak"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Anak"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/kerabat"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Kerabat Lainnya"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                >
+            </RadioButton>
+
+        </RadioGroup>
 
     </LinearLayout>
   </androidx.core.widget.NestedScrollView>
